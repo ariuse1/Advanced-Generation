@@ -12,7 +12,7 @@ public class SpawnPoint : MonoBehaviour
 
     public void Spawn()
     {
-        Bird bird = Instantiate(_tamplate.gameObject, transform.position, Quaternion.identity).GetComponent<Bird>();
+        Bird bird = Instantiate(_tamplate, transform.position, Quaternion.identity);
         bird.SetTarget(_target);
     }
 }

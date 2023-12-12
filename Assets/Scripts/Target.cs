@@ -22,8 +22,8 @@ public class Target : MonoBehaviour
     {
         Transform target = _points[_currentPoint].transform;
         transform.position = Vector3.MoveTowards(transform.position, target.position, _speed * Time.deltaTime);
-
-        if(transform.position == target.position)
+       
+        if (transform.position == target.position)
         {
             _currentPoint++;          
 

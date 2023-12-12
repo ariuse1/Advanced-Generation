@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Bird : MonoBehaviour
 {
@@ -17,9 +18,7 @@ public class Bird : MonoBehaviour
     }
 
     private void Move()
-    {
-        Transform target = _target.transform;
-
-        transform.position = Vector3.MoveTowards(transform.position, target.position, _speed * Time.deltaTime);        
+    {     
+        transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, _speed * Time.deltaTime);    
     }
 }
