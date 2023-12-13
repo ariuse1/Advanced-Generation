@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    [SerializeField] private Path _path;
-    [SerializeField] private float _speed = 2;    
+    [SerializeField] private float _speed = 2;
+
+    public Path _path;
 
     private int _currentPoint;    
-    private Point[] _points;    
+    private Point[] _points;
 
-    private void Start()
+    private void Awake()
     {
-        _points = _path.Points;  
+        _points = _path.GetComponentsInChildren<Point>();
     }
 
     private void Update()
