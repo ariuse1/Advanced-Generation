@@ -3,8 +3,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     [SerializeField] private float _speed = 2;
-
-    public Path _path;
+    [SerializeField] private Path _path;
 
     private int _currentPoint;    
     private Point[] _points;
